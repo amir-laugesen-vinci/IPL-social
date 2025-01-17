@@ -1,5 +1,7 @@
 export class Main {
     passwordChecker(password) {
-        return password.length >= 8;
+        const hasMinLength = password.length >= 8;
+        const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(password);
+        return hasMinLength && hasSpecialChar;
     }
 }
