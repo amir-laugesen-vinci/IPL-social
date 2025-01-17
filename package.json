@@ -1,0 +1,14 @@
+{
+  "name": "ipl-social",
+  "version": "1.0.0",
+  "description": "Project IPL Social with CI pipeline and TDD",
+  "main": "index.js",
+  "scripts": {
+    "test": "jasmine"
+  },
+  "author": "Laugesen Amir",
+  "license": "ISC",
+  "devDependencies": {
+    "jasmine": "^5.5.0"
+  }
+}
