@@ -28,4 +28,4 @@ jobs:
 
       # Étape 4 : Exécuter les tests
       - name: Run tests
-        run: chaud +x ./node_modyles/.bin/jasmine
+        run: npm test
