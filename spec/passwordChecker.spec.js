@@ -14,4 +14,10 @@ describe("it should verify all steps of the password to meet expectation for the
         const result = main.passwordChecker("abc123");
         expect(result).toBe(false);
     });
+
+    it("should fail if password does not contain a special character", function() {
+
+        const result = main.passwordChecker("ValidPassword123");
+        expect(result).toBe(false);
+    });
 });
