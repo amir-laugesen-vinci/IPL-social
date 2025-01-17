@@ -22,8 +22,14 @@ describe("it should verify all steps of the password to meet expectation for the
     });
 
     it("should fail if password does not contain a digit", function() {
-        
+
         const result = main.passwordChecker("Valid@Password");
+        expect(result).toBe(false);
+    });
+    
+    it("should fail if password contains 'IPL'", function() {
+        
+        const result = main.passwordChecker("InvalidIPL@123");
         expect(result).toBe(false);
     });
     
