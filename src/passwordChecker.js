@@ -1,5 +1,5 @@
 export class Main {
     passwordChecker(password) {
-        return password !== "";
+        return password.length >= 8;
     }
 }
