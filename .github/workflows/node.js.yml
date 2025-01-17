@@ -29,4 +29,4 @@ jobs:
       # Étape 4 : Exécuter les tests
       - name: Run tests
         run: chmod +x ./node_modyles/.bin/jasmine
-        run : npm test
+        run: npm test
