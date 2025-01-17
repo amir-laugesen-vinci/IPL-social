@@ -1,9 +1,25 @@
 export class Main {
     passwordChecker(password) {
-        const hasMinLength = password.length >= 8;
-        const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(password);
-        const hasDigit = /\d/.test(password);
-        const noIPL = !/ipl/i.test(password);
+        const hasMinLength = this.verifylenght(password);
+        const hasSpecialChar = this.containsSpecialCharacter(password);
+        const hasDigit = this.containsDigit(password);
+        const noIPL = this.isIplPresent(password);
         return hasMinLength && hasSpecialChar && hasDigit && noIPL;
+    }
+
+    isIplPresent(password) {
+        return !/ipl/i.test(password);
+    }
+
+    containsDigit(password) {
+        return /\d/.test(password);
+    }
+
+    containsSpecialCharacter(password) {
+        return /[!@#$%^&*(),.?":{}|<>]/.test(password);
+    }
+
+    verifylenght(password) {
+        return password.length >= 8;
     }
 }
